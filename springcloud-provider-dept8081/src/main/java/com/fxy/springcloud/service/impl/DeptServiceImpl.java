@@ -21,7 +21,7 @@ public class DeptServiceImpl implements DeptService {
     private DeptDao deptDao;
     @Override
     public boolean addDept(Dept dept) {
-        return false;
+        return deptDao.addDept(dept);
     }
 
     @Override

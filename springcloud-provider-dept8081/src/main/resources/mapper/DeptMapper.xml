@@ -5,8 +5,8 @@
 <mapper namespace="com.fxy.springcloud.dao.DeptDao">
 
     <insert id="addDept" parameterType="Dept">
-        insert into dept (dname, db_source)
-        values (#{dname},DATABASE())
+        insert into dept (deptno,dname, db_source)
+        values (#{deptno},#{dname},DATABASE())
     </insert>
 
     <select id="queryById" resultType="Dept" parameterType="Long">

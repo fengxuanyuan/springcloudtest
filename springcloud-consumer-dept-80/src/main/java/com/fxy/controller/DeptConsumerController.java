@@ -27,7 +27,7 @@ public class DeptConsumerController {
 
     @RequestMapping("/consumer/add")
     public boolean add(Dept dept){
-       return restTemplate.postForObject(REMOTE_ADDR+"/dept/add",dept,Boolean.class);
+       return restTemplate.postForObject(REMOTE_ADDR+"/dept/add/",dept,Boolean.class);
     }
 
     @RequestMapping("/consumer/get/{id}")
