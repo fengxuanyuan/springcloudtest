@@ -9,12 +9,16 @@ package com.fxy.springcloud.service.impl;
 
 
 import com.fxy.entity.Dept;
+import com.fxy.springcloud.dao.DeptDao;
 import com.fxy.springcloud.service.DeptService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
 public class DeptServiceImpl implements DeptService {
+    @Autowired
+    private DeptDao deptDao;
     @Override
     public boolean addDept(Dept dept) {
         return false;
@@ -22,11 +26,12 @@ public class DeptServiceImpl implements DeptService {
 
     @Override
     public Dept queryById(Long id) {
-        return null;
+        return deptDao.queryById(id);
+        //return null;
     }
 
     @Override
     public List<Dept> queryAll() {
-        return null;
+        return deptDao.queryAll();
     }
 }

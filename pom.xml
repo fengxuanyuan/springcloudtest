@@ -10,6 +10,7 @@
     <modules>
         <module>spirngcloud-api</module>
         <module>springcloud-provider-dept8081</module>
+        <module>springcloud-consumer-dept-80</module>
     </modules>
 
     <packaging>pom</packaging>

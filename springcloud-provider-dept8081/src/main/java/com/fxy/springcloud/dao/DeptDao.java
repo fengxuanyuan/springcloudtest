@@ -9,13 +9,16 @@ package com.fxy.springcloud.dao;
 
 
 import com.fxy.entity.Dept;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+/*@Mapper //如果在启动类上面加上了mapperscan注解，就不需要这两个注解了
+@Repository*/
 public interface DeptDao {
-    public boolean addDept(Dept dept);
+    boolean addDept(Dept dept);
 
-    public Dept queryById(Long id);
+    Dept queryById(Long id);
 
-    public List<Dept> queryAll();
+    List<Dept> queryAll();
 }
