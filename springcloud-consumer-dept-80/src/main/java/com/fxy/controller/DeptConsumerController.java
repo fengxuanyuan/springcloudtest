@@ -23,7 +23,10 @@ public class DeptConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String REMOTE_ADDR = "http://localhost:8081";
+    //这里是没有做负载均衡的，只到某个固定ip及端口访问某个服务
+    // private static final String REMOTE_ADDR = "http://localhost:8081";
+
+    private static final String REMOTE_ADDR = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @RequestMapping("/consumer/add")
     public boolean add(Dept dept){

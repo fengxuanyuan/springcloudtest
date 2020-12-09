@@ -1,9 +1,9 @@
 server:
-  port: 7001
+  port: 7002
 
 eureka:
   instance:
-    hostname: eureka7001.com #服务注册中心IP地址
+    hostname: eureka7002.com #服务注册中心IP地址
 
   client:
     registerWithEureka: false #是否向服务注册中心注册自己
@@ -11,4 +11,4 @@ eureka:
     serviceUrl: #服务注册中心的配置内容，指定服务注册中心的位置
      # defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #这个只是注册地址，访问后台地址只需要输入ip+端口号就可以了
       # 集群（关联）：
-      defaultZone: http://eureka7002.com/eureka/,http://eureka7003.com:7003/eureka/ #此处必须使用域名，之前使用127.0.0.1这个ip是不行的
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
